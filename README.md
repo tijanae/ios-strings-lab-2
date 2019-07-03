@@ -9,7 +9,12 @@ You are given a string stored in variable `problem`. Write code so that you prin
 ```swift
 var problem = "split this string into words and print them on separate lines"
 
-// Your code
+// your code
+
+var problem = "split this string into words and print them on separate lines"
+var splitProblem = problem.replacingOccurrences(of: " ", with: "\n")
+
+print(splitProblem)
 ```
 
 Example
@@ -53,6 +58,14 @@ Sample Input: `"Swift is the best language"`
 
 Sample Output: `"language best the is Swift"`
 
+```
+var input = "Swift is the best language"
+var newInput = input.split(separator: " ")
+
+print(Array (newInput.reversed()).joined(separator: " "))
+```
+
+
 
 ## Question 4
 
@@ -63,6 +76,19 @@ Example:
 Sample Input: `"danaerys dad cat civic bottle"`
 
 Sample Output: `2`
+
+```
+var quest4 = "danaerys dad cat civic bottle"
+var gotFan = quest4.split(separator: " ")
+var wordCount = 0
+
+for word in gotFan{
+if word == String (word.reversed()) {
+wordCount += 1
+}
+}
+print(wordCount)
+```
 
 
 ## Question 5
